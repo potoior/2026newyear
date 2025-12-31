@@ -383,7 +383,7 @@ onMounted(() => {
   updateCountdown()
   countdownInterval = setInterval(updateCountdown, 1000)
 
-  socket = io('http://localhost:3000')
+  socket = io(window.location.origin)
 
   socket.on('connect', () => {
     console.log('已连接到服务器')
